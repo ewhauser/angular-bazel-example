@@ -30,6 +30,7 @@ ng_module(
         "@angular//packages/platform-browser",
         "@angular//packages/platform-browser/animations",
         "@angular//packages/router",
+        "@npm//@auth0/angular-jwt",
         "@npm//@ngrx/store",
     ],
 )

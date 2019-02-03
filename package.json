@@ -8,6 +8,7 @@
         "yarn": ">=1.9.2 <2.0.0"
     },
     "dependencies": {
+        "@auth0/angular-jwt": "^2.1.0",
         "@ngrx/store": "7.0.0",
         "rxjs": "6.3.3",
         "systemjs": "0.21.5",

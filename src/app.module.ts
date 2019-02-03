@@ -8,12 +8,22 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
 import {todoReducer} from './reducers/reducers';
+import { JwtModule } from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return "token";
+}
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     AppRoutingModule, BrowserModule, BrowserAnimationsModule, MaterialModule,
-    StoreModule.forRoot({todoReducer})
+    StoreModule.forRoot({todoReducer}),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter,
+      }
+    }),
   ],
   exports: [AppComponent],
   bootstrap: [AppComponent],
